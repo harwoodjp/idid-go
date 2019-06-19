@@ -9,7 +9,7 @@ func main() {
   args := os.Args[1:]
 
   if len(args) == 1 {
-    journal := models.Journal{FilePath: "/home/justin/Projects/go/src/idid/.journal"}
+    journal := models.Journal{FilePath:"/Users/justin.harwood/Documents/.ididjournal" }
 
     if args[0] == "what" {
       journal.Read()

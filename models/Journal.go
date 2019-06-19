@@ -6,6 +6,7 @@ import (
   "os"
   "log"
   "time"
+  "github.com/fatih/color"
 )
 
 type Journal struct {
@@ -43,7 +44,7 @@ func (j *Journal) Read() {
     n, err := f.Read(buff)
 
     if n > 0 {
-      fmt.Println(string(buff[:n-1]))
+      color.Green(string(buff[:n-1]))
     }
 
     if err == io.EOF {
